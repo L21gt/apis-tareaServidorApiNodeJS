@@ -1,6 +1,7 @@
 const http = require('http');
 const url = require('url'); // Módulo para manejar URLs
 
+// Crear el servidor HTTP
 const server = http.createServer((req, res) => {
   try {
     // Verificar si la ruta es /collatz y si es una solicitud GET
@@ -68,6 +69,7 @@ function calcularSecuenciaCollatz(n) {
   return secuencia;
 }
 
+// Configurar el puerto del servidor
 const PORT = 3000;
 server.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
